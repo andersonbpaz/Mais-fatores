@@ -18,3 +18,10 @@ str(matrizTesteInteiros)
 install.packages("arules")
 library(arules)
 matrizTesteInteiros$auto.Disc <- discretize(matrizTesteInteiros$auto, method = "interval", breaks = 3, labels = c("mais frequente", 'segundo mais frequente', 'outros'))
+
+# forcats - usando tidyverse para fatores
+install.packages("forcats")
+library(forcats)
+fct_count(matrizTesteFactor$bairro) 
+fct_anon(matrizTesteFactor$bairro) 
+fct_lump(matrizTesteFactor$bairro, n = 1) 
